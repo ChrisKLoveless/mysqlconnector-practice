@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Shop.Models;
 
-namespace ProjectName
+namespace Shop
 {
   class Program
   {
@@ -11,12 +12,12 @@ namespace ProjectName
 
       builder.Services.AddControllersWithViews();
 
+      DBConfiguration.ConnectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
+
       WebApplication app = builder.Build();
 
-      app.UseDeveloperExceptionPage();
-
+    //   app.UseDeveloperExceptionPage();
       app.UseHttpsRedirection();
-
       app.UseStaticFiles();
 
       app.UseRouting();
