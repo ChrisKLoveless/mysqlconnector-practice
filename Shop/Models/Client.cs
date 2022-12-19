@@ -22,19 +22,19 @@ namespace Shop.Models
             _instances.Clear();
         }
 
-        public static List<Category> GetAll()
+        public static List<Client> GetAll()
         {
             return _instances;
         }
 
-        public static Category Find(int searchId)
+        public static Client Find(int searchId)
         {
             return _instances[searchId - 1];
         }
 
-        public void AddItem(Item item)
+        public void AddOrder(Order order)
         {
-            Items.Add(item);
+            Orders.Add(order);
         }
     }
 }

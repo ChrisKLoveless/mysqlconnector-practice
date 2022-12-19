@@ -1,4 +1,4 @@
-namespace ToDoList.Models
+namespace Shop.Models
 {
   public static class DBConfiguration
   {

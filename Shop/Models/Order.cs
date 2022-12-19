@@ -119,7 +119,7 @@ namespace Shop.Models
             {
                 conn.Dispose();
             }
-            return allItems;
+            return allOrders;
         }
 
         public static void ClearAll()

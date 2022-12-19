@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Shop.Models;
+
+<h3>Here are all the orders for this Client:</h3>
+
+<ol>
+@foreach (Order order in @Model["orders"])
+{
+  <li><a href='/clients/@Model["client"].Id/orders/@order.Id'>@order.Description</a></li>
+}
+</ol>
+
+<p><a href='/clients/@Model["client"].Id/orders/new'>Add a new order</a></p>
+<p><a href='/clients'>Return to client list</a></p>
+<p><a href='/'>Return to Main Page</a></p>
